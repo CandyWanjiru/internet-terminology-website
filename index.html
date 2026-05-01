@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Internet Terminology</title>
+    <title> ★ Internet Terminology ★</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-    Internet Terminology -by Candy:)
+    𝑰𝒏𝒕𝒆𝒓𝒏𝒆𝒕 𝑻𝒆𝒓𝒎𝒊𝒏𝒐𝒍𝒐𝒈𝒚 -𝒃𝒚 𝑪𝒂𝒏𝒅𝒚:) ☆
 </header>
 
 <p class="welcome">
-    Welcome to my mini-website which I am very proud of!!.<br>
-    Please press any button for more information on the terminologies<3
+    ☆ 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓶𝔂 𝓶𝓲𝓷𝓲-𝔀𝓮𝓫𝓼𝓲𝓽𝓮 𝔀𝓱𝓲𝓬𝓱 𝓘 𝓪𝓶 𝓿𝓮𝓻𝔂 𝓹𝓻𝓸𝓾𝓭 𝓸𝓯!! ☆<br> 
+     ☆𝓟𝓵𝓮𝓪𝓼𝓮 𝓹𝓻𝓮𝓼𝓼 𝓪𝓷𝔂 𝓫𝓾𝓽𝓽𝓸𝓷 𝓯𝓸𝓻 𝓶𝓸𝓻𝓮 𝓲𝓷𝓯𝓸𝓻𝓶𝓪𝓽𝓲𝓸𝓷 𝓸𝓷 𝓽𝓱𝓮 𝓽𝓮𝓻𝓶𝓲𝓷𝓸𝓵𝓸𝓰𝓲𝓮𝓼<  ☆
 </p>
 
 <div class="container">
@@ -20,29 +20,13 @@
     <!-- LEFT SIDE BUTTONS -->
     <div class="menu">
 
-        <a href="pages/tcp.html">
-            <span class="dot"></span> TCP
-        </a>
+    <a class="term-btn" href="pages/tcp.html">𝑻𝑪𝑷 ⌨</a>
+    <a class="term-btn" href="pages/ip.html">𝑰𝑷 🖱</a>
+    <a class="term-btn" href="pages/browser.html">𝑩𝒓𝒐𝒘𝒔𝒆𝒓 🌐</a>
+    <a class="term-btn" href="pages/server.html">𝑺𝒆𝒓𝒗𝒆𝒓 🌏</a>
+    <a class="term-btn" href="pages/url.html">𝑼𝑹𝑳 🖨</a>
+    <a class="term-btn" href="pages/dns.html">𝑫𝑵𝑺 🖥️</a>
 
-        <a href="pages/ip.html">
-            <span class="dot"></span> IP
-        </a>
-
-        <a href="pages/browser.html">
-            <span class="dot"></span> Browser
-        </a>
-
-        <a href="pages/server.html">
-            <span class="dot"></span> Server
-        </a>
-
-        <a href="pages/url.html">
-            <span class="dot"></span> URL
-        </a>
-
-        <a href="pages/dns.html">
-            <span class="dot"></span> DNS
-        </a>
 
     </div>
 
@@ -52,6 +36,41 @@
     </div>
 
 </div>
+
+<script>
+document.querySelectorAll(".term-btn").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        e.preventDefault(); // stop immediate navigation
+
+        // clone button for animation
+        let clone = this.cloneNode(true);
+        let rect = this.getBoundingClientRect();
+
+        clone.style.position = "fixed";
+        clone.style.left = rect.left + "px";
+        clone.style.top = rect.top + "px";
+        clone.style.width = rect.width + "px";
+        clone.style.zIndex = "9999";
+
+        document.body.appendChild(clone);
+
+        // animate to top right
+        setTimeout(() => {
+            clone.style.transition = "all 0.6s ease";
+            clone.style.transform = "scale(1.5)";
+            clone.style.top = "10px";
+            clone.style.right = "10px";
+            clone.style.left = "auto";
+            clone.style.opacity = "0.5";
+        }, 10);
+
+        // after animation, go to page
+        setTimeout(() => {
+            window.location.href = this.href;
+        }, 700);
+    });
+});
+</script>
 
 </body>
 </html>

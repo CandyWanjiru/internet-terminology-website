@@ -1,12 +1,12 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url("./images/background.jpg");
     background-size: cover;
+     background-image: url("./images/background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    color: #1f2937;
+    color: #000000;
 }
 
 h1 {
@@ -22,11 +22,6 @@ p {
     margin: auto;
 }
 
-div {
-    text-align: center;
-    background-color: #90c7a9;
-    padding: 15px;
-}
 
 div a {
     color: white;
@@ -73,20 +68,22 @@ header {
 }
 
 .menu a {
-    background-color: white;
+    background-color: #90c7a9;  /* light green */
     color: black;
+    margin: 8px 0;
     padding: 12px;
-    margin: 5px 0;
-    text-align: center;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
     transition: 0.3s;
 }
 
 .menu a:hover {
-    background-color: lightgreen;
+    background-color: #7bbd95;  /* slightly darker green */
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
@@ -126,11 +123,11 @@ header {
 
 /* Buttons */
 .menu a {
-    background-color: white;
+    background-color: #90c7a9;  /* light green */
+    color: black;
     margin: 8px 0;
     padding: 12px;
     text-decoration: none;
-    color: black;
     border-radius: 8px;
     font-weight: bold;
     display: flex;
@@ -139,7 +136,7 @@ header {
 }
 
 .menu a:hover {
-    background-color: lightgreen;
+    background-color: #7bbd95;  /* slightly darker green */
 }
 
 /* Small dot indicator */
@@ -153,9 +150,11 @@ header {
 }
 
 /* Right image */
-.image-box img {
-    width: 350px;
-    border-radius: 10px;
+.image-box {
+    background-color: #90c7a9;  /* light green */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 /* normal button */
 .term-btn {
